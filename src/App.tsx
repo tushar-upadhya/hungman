@@ -6,6 +6,8 @@ import { Keyboard } from "./components/Keyboard";
 
 import words from "./data/wordList.json";
 
+import "./css/app.css";
+
 function getWord() {
     return words[Math.floor(Math.random() * words.length)];
 }
