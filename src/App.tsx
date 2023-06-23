@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useState } from "react";
 
-import { HangmanDrawing } from "./components/Drawing";
-import { HangmanWord } from "./components/HangmanWord";
+import { Drawing } from "./components/Drawing";
+import { Word } from "./components/Word";
 import { Keyboard } from "./components/Keyboard";
 
 import words from "./data/wordList.json";
@@ -82,8 +82,8 @@ function App() {
                 {isWinner && "Winner! - Refresh to try again"}
                 {isLoser && "Nice Try - Refresh to try again"}
             </div>
-            <HangmanDrawing numberOfGuesses={incorrectLetters.length} />
-            <HangmanWord
+            <Drawing numberOfGuesses={incorrectLetters.length} />
+            <Word
                 reveal={isLoser}
                 guessedLetters={guessedLetters}
                 wordToGuess={wordToGuess}

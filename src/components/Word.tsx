@@ -1,14 +1,14 @@
-type HangmanWordProps = {
+type WordProps = {
     guessedLetters: string[];
     wordToGuess: string;
     reveal?: boolean;
 };
 
-export function HangmanWord({
+export function Word({
     guessedLetters,
     wordToGuess,
     reveal = false,
-}: HangmanWordProps) {
+}: WordProps) {
     return (
         <div
             style={{
